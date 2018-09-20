@@ -27,6 +27,7 @@ class Spread_sheet_class{
         // セッション初期化
         $curl = curl_init() ;
         // オプション設定
+        $REQUEST_METHOD = 'GET' ;
         curl_setopt( $curl , CURLOPT_URL , $url ) ; // リクエストURL
         curl_setopt( $curl , CURLOPT_HEADER, false ) ; // ヘッダ情報の受信なし
         curl_setopt( $curl , CURLOPT_CUSTOMREQUEST , $REQUEST_METHOD ) ; // リクエストメソッド設定
@@ -38,7 +39,7 @@ class Spread_sheet_class{
         // セッション終了
         curl_close( $curl ) ;
         /***** リクエスト実行結果取得 *****/
-        $res_data_arr = json_decode($res_str, ture) ; // JSONを変換
+        $res_data_arr = json_decode($res_str, true) ; // JSONを変換
         if($res_data_arr["error"]){
             $this->result = "データが取得出来ませんでした。#1" . PHP_EOL;
             return;
