@@ -1,0 +1,10 @@
+①下記４ファイルとマリオの画像が入ったimagesフォルダを同ディレクトリに配置
+index.html
+main.css
+main.js
+mario.js
+images
+    mario_right.png(右マリオが３体並んでいる画像)
+    mario_left.png(左マリオが３体並んでいる画像)
+②ブラウザでindex.htmlを開く
+③左右のカーソルキーで動作
